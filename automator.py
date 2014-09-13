@@ -97,7 +97,7 @@ class ExcelWriter(object):
 
 	def __init__(self):
 		# grab excel file and columns
-		self.wb_read = open_workbook('hudson.xlsx')
+		self.wb_read = open_workbook('pids.xlsx')
 		self.wb_write = Workbook()
 		self.output = self.wb_write.add_sheet('PID and Names')
 
@@ -123,6 +123,7 @@ class ExcelWriter(object):
 				self.wb_write.save('names.xlsx')
 
 				row_counter += 1 
+
 
 pid_getter = PIDGetter()
 pid_getter.login("___YOUR USERNAME HERE___", "__YOUR PASSWORD HERE__")
